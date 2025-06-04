@@ -73,12 +73,6 @@ Para reproduzir este laboratório, você precisa:
 3. Clique em **"Criar"** para iniciar a implantação
 4. Aguarde aproximadamente 5-10 minutos
 
-### 6. Conexão via RDP
-1. Na VM criada, clique em **"Conectar"** → **"RDP"**
-2. Baixe o arquivo `.rdp`
-3. Execute o arquivo e insira as credenciais
-4. Conecte-se à máquina virtual
-
 ## 📸 Capturas de Tela
 
 ![Criação da VM](./generated_image.png)
