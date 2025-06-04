@@ -75,7 +75,8 @@ Para reproduzir este laboratório, você precisa:
 
 ## 📸 Capturas de Tela
 
-![Criação da VM](./generated_image.png)
+![Criação da VM](images/generated_image.png)
+
 *Tela inicial de criação da máquina virtual*
 
 ## 💡 Lições Aprendidas
