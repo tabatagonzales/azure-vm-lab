@@ -32,9 +32,6 @@ Este repositório documenta minha experiência prática com a criação de máqu
 
 - **Microsoft Azure** - Plataforma de nuvem
 - **Windows Server 2022** - Sistema operacional da VM
-- **IIS (Internet Information Services)** - Servidor web
-- **RDP (Remote Desktop Protocol)** - Protocolo de acesso remoto
-- **PowerShell** - Scripts de automação
 
 ## ✅ Pré-requisitos
 
@@ -43,8 +40,6 @@ Para reproduzir este laboratório, você precisa:
 - ✅ Conta ativa no Microsoft Azure
 - ✅ Conhecimentos básicos de Windows Server
 - ✅ Acesso ao Portal do Azure
-- ✅ Conhecimento básico em redes (firewall, portas)
-- ✅ Cliente RDP instalado (Windows Remote Desktop)
 
 ## 🚀 Passo a Passo
 
@@ -84,41 +79,10 @@ Para reproduzir este laboratório, você precisa:
 3. Execute o arquivo e insira as credenciais
 4. Conecte-se à máquina virtual
 
-## ⚙️ Configurações Importantes
-
-### Instalação do IIS
-Execute no PowerShell da VM:
-```powershell
-Install-WindowsFeature -name Web-Server -IncludeManagementTools
-```
-
-### Configuração do Firewall
-Para permitir tráfego HTTP:
-```powershell
-New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow
-```
-
-### Teste de Conectividade
-1. Abra o navegador na VM
-2. Acesse `http://localhost`
-3. Verifique se a página padrão do IIS aparece
-
 ## 📸 Capturas de Tela
 
-![Criação da VM](./images/vm-creation-step1.png)
+![Criação da VM](./generated_image.png)
 *Tela inicial de criação da máquina virtual*
-
-![Configurações Básicas](./images/vm-creation-step2.png)
-*Formulário de configurações básicas da VM*
-
-![Configuração de Rede](./images/vm-creation-step3.png)
-*Configuração de portas e acesso à rede*
-
-![Dashboard da VM](./images/vm-dashboard.png)
-*Dashboard de monitoramento da VM no portal Azure*
-
-![IIS Funcionando](./images/vm-iis-welcome.png)
-*Página de boas-vindas do IIS após instalação*
 
 ## 💡 Lições Aprendidas
 
@@ -126,27 +90,14 @@ New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -Protocol TCP -
 - **Planejamento de custos**: VMs consomem recursos constantemente, importante desligar quando não usar
 - **Segurança de rede**: Configurar apenas as portas necessárias nos Network Security Groups
 - **Backup automático**: Configurar backups desde o início evita perda de dados
-- **Monitoramento**: Azure Monitor fornece métricas importantes de performance
 
-### ⚠️ Dificuldades Encontradas
-- **Conectividade RDP**: Inicial dificuldade com firewall, resolvido liberando porta 3389
-- **Custos inesperados**: VM ficou ligada por 3 dias, gerando custo maior que esperado
-- **Performance lenta**: VM básica (B1s) mostrou limitações, upgrade para B2s resolveu
-- **Configuração IIS**: Necessário instalar role manualmente, não vem pré-instalado
-
-### 💰 Dicas de Economia
-- Sempre **desligar a VM** quando não estiver usando
-- Usar **discos Standard** para laboratórios (não Premium)
-- Configurar **auto-shutdown** para evitar custos desnecessários
-- Monitorar gastos pelo **Azure Cost Management**
 
 ## 📚 Referências
 
 - [Documentação oficial da Microsoft](https://learn.microsoft.com/pt-br/azure/)
 - [Criar VM Windows no Portal Azure](https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/quick-create-portal)
-- [Configuração de IIS no Windows Server](https://learn.microsoft.com/pt-br/iis/)
 - [Melhores práticas de segurança Azure](https://learn.microsoft.com/pt-br/azure/security/)
-- Material do curso DIO - Digital Innovation One
+- Material do curso DIO - Introdução ao Computador em nuvem
 
 ---
 
